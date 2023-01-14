@@ -12,6 +12,7 @@ public class UserRegistrationMain {
         ur.checkPassword();
         ur.checkUppercase();
         ur.checkNumericNum();
+        ur.checkSpecialChar();
 
     }
 }
