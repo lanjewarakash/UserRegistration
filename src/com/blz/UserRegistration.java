@@ -92,4 +92,18 @@ public class UserRegistration {
         }
     }
 
+    public void checkNumericNum() {
+        System.out.println("Enter a @least Numeric Number");
+        Scanner sc = new Scanner(System.in);
+        String nNum = sc.next();
+
+        Pattern p = Pattern.compile("(?=.*[0-9])[0-9a-zA-Z@!+_.]{8,}");
+        Matcher m = p.matcher(nNum);
+        if (m.matches()) {
+            System.out.println("Valid ! It contains Numeric Number");
+        } else {
+            System.out.println("Enter @least one Numeric Number");
+        }
+    }
+
 }
