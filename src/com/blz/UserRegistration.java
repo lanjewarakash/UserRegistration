@@ -19,4 +19,19 @@ public class UserRegistration {
             System.out.println(name + " Is a InValid Name");
         }
     }
+
+    public void checkLastName() {
+        System.out.println("Enter a LastName");
+        Scanner sc = new Scanner(System.in);
+        String lName = sc.nextLine();
+
+        Pattern p = Pattern.compile("[A-Z][a-z]{2}+[a-z]*");
+        Matcher m = p.matcher(lName);
+
+        if (m.matches()) {
+            System.out.println(lName + " Is a Valid LastName");
+        } else {
+            System.out.println(lName + " Is a InValid LastName");
+        }
+    }
 }

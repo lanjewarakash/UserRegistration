@@ -6,6 +6,7 @@ public class UserRegistrationMain {
 
         UserRegistration ur = new UserRegistration();
         ur.checkFirstName();
+        ur.checkLastName();
 
 
     }
