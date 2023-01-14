@@ -13,6 +13,6 @@ public class UserRegistrationMain {
         ur.checkUppercase();
         ur.checkNumericNum();
         ur.checkSpecialChar();
-
+        ur.checkEmailIdSample();
     }
 }
