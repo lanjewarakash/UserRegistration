@@ -106,4 +106,18 @@ public class UserRegistration {
         }
     }
 
+    public void checkSpecialChar() {
+        System.out.println("Enter a @least Special Character");
+        Scanner sc = new Scanner(System.in);
+        String sChar = sc.next();
+
+        Pattern p = Pattern.compile("(?=.*[+._@!-])[0-9a-zA-Z@!+_.]{8,}");
+        Matcher m = p.matcher(sChar);
+        if (m.matches()) {
+            System.out.println("Valid ! It contains Special Character");
+        } else {
+            System.out.println("Enter @least one Special Character");
+        }
+    }
+
 }
