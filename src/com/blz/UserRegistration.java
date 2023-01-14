@@ -49,4 +49,19 @@ public class UserRegistration {
             System.out.println(eId + " Is a InValid EmailId");
         }
     }
+
+    public void checkMobileNumber() {
+        System.out.println("Enter a Mobile Number");
+        Scanner sc = new Scanner(System.in);
+        String mNum = sc.nextLine();
+
+        Pattern p = Pattern.compile("(0|91)?[789][0-9]{9}");
+        Matcher m = p.matcher(mNum);
+
+        if (m.matches()) {
+            System.out.println(mNum + " Is a Valid Mobile Number");
+        } else {
+            System.out.println(mNum + " Is a InValid Mobile Number");
+        }
+    }
 }

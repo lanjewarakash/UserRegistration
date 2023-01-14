@@ -8,6 +8,7 @@ public class UserRegistrationMain {
         ur.checkFirstName();
         ur.checkLastName();
         ur.checkEmailId();
+        ur.checkMobileNumber();
 
     }
 }
