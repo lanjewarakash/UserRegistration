@@ -78,6 +78,7 @@ public class UserRegistration {
             System.out.println("Password is Wrong");
         }
     }
+
     public void checkUppercase() {
         System.out.println("Enter a @least upperCase");
         Scanner sc = new Scanner(System.in);
@@ -120,4 +121,18 @@ public class UserRegistration {
         }
     }
 
+    public void checkEmailIdSample() {
+        System.out.println("Enter a Any Email id");
+        Scanner sc = new Scanner(System.in);
+        String eId = sc.nextLine();
+
+        Pattern p = Pattern.compile("[a-zA-Z0-9.-]*@[a-zA-Z]+[.][a-zA-Z]+");
+        Matcher m = p.matcher(eId);
+
+        if (m.matches()) {
+            System.out.println(eId + " Is a Valid EmailId");
+        } else {
+            System.out.println(eId + " Is a InValid EmailId");
+        }
+    }
 }
