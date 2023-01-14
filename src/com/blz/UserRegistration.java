@@ -78,4 +78,18 @@ public class UserRegistration {
             System.out.println("Password is Wrong");
         }
     }
+    public void checkUppercase() {
+        System.out.println("Enter a @least upperCase");
+        Scanner sc = new Scanner(System.in);
+        String pUpp = sc.next();
+
+        Pattern p = Pattern.compile("(?=.*[A-Z])[0-9a-zA-Z@!+_.]{8,}");
+        Matcher m = p.matcher(pUpp);
+        if (m.matches()) {
+            System.out.println("Valid ! It contains uppercase letter");
+        } else {
+            System.out.println("Enter @least one uppercase letter");
+        }
+    }
+
 }

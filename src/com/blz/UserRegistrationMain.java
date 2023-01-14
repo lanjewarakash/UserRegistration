@@ -10,6 +10,7 @@ public class UserRegistrationMain {
         ur.checkEmailId();
         ur.checkMobileNumber();
         ur.checkPassword();
+        ur.checkUppercase();
 
     }
 }
