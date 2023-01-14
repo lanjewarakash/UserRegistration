@@ -64,4 +64,18 @@ public class UserRegistration {
             System.out.println(mNum + " Is a InValid Mobile Number");
         }
     }
+
+    public void checkPassword() {
+        System.out.println("Enter a Password");
+        Scanner sc = new Scanner(System.in);
+        String pass = sc.next();
+
+        Pattern p = Pattern.compile("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$");
+        Matcher m = p.matcher(pass);
+        if (m.matches()) {
+            System.out.println("PassWord is Correct");
+        } else {
+            System.out.println("Password is Wrong");
+        }
+    }
 }
